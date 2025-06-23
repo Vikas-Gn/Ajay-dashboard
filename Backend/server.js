@@ -70,7 +70,7 @@ logger.info('Environment Configuration:', {
   DB_USER: process.env.DB_USER,
   DB_HOST: process.env.DB_HOST,
   DB_NAME: process.env.DB_NAME,
-  DB_PASSWORD: '****',
+  DB_PASSWORD: 'admin123',
   DB_PORT: process.env.DB_PORT,
   FRONTEND_URL: process.env.FRONTEND_URL,
   JWT_SECRET: process.env.JWT_SECRET ? '****' : 'Not set',
@@ -91,7 +91,7 @@ const allowedOrigins = [
   'http://44.223.23.145:8006',
   'http://44.223.23.145:8007',
   'http://44.223.23.145:8008',
-  process.env.FRONTEND_URL || 'http://localhost:3000',
+  process.env.FRONTEND_URL || 'http://52.66.249.207:3037',
 ];
 
 // Enhanced CORS setup
@@ -168,9 +168,9 @@ app.use((req, res, next) => {
 // Database Configuration
 const pool = new Pool({
   user: process.env.DB_USER || 'postgres',
-  host: process.env.DB_HOST || 'localhost',
+  host: process.env.DB_HOST || 'postgres',
   database: process.env.DB_NAME || 'new_employee_db',
-  password: process.env.DB_PASSWORD || 'Password@12345',
+  password: process.env.DB_PASSWORD || 'admin123',
   port: process.env.DB_PORT || 5432,
   connectionTimeoutMillis: 10000,
   idleTimeoutMillis: 30000,
