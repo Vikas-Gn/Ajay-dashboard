@@ -91,7 +91,7 @@ const allowedOrigins = [
   'http://44.223.23.145:8006',
   'http://44.223.23.145:8007',
   'http://44.223.23.145:8008',
-  process.env.FRONTEND_URL || 'http://52.66.249.207:3037',
+  process.env.FRONTEND_URL || 'http://52.66.249.207:3039',
 ];
 
 // Enhanced CORS setup
